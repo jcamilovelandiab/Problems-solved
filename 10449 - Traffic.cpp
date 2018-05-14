@@ -19,25 +19,19 @@ vl dist(205), weights(205);
 void bellmanFord(){
 	int src=1; dist[src]=0;
 	
-	bool isUpdated;
 	FOR(k, n-1){
-		isUpdated=false;
 		loop(u,1, n+1){
 			FOR(j,graph[u].size()){
 				ll v = graph[u][j];
-				if(dist[v.fi]>dist[u]+v.se && dist[u]!=INF){
-					dist[v.fi]=dist[u]+v.se;
-					isUpdated=true;
-				}
+				dist[v.fi]=min(dist[v.fi], dist[u]+v.se);
 			}
 		}
-		if(!isUpdated) break;
 	}
 	
 	loop(u,1, n+1){
 		FOR(j,graph[u].size()){
 			ll v = graph[u][j];
-			if(dist[v.fi]>dist[u]+v.se && dist[u]!=INF){
+			if(dist[v.fi]>dist[u]+v.se){
 				dist[v.fi]=INT_MIN;
 			}
 		}
@@ -77,4 +71,3 @@ int main(){
 	}
 	return 0;
 }
-
