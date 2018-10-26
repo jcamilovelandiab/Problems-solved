@@ -1,7 +1,7 @@
 /*
     UVa online judge 11514 - Batman
     @author: jcamilovelandiab
-    time: 0.540
+    time: 0.510
 */
 
 #include <bits/stdc++.h>
