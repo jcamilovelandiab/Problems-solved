@@ -68,19 +68,20 @@ int main(){
 			res[u][v]+=w;
 			res[v][u]+=w;
 		}
+		/*
 		cout<<endl;
 		loop(i,1,n+1){
 			loop(j,1,n+1) cout<<res[i][j]<<" ";
 			cout<<endl;
-		}
+		}*/
 		
 		cout<<"Network "<<tc++<<endl;
 		cout<<"The bandwidth is "<<EdmondsKarp()<<".\n\n";
-		
+		/*
 		loop(i,1,n+1){
 			loop(j,1,n+1) cout<<res[i][j]<<" ";
 			cout<<endl;
-		}
+		}*/
 	}
 	return 0;
 }
